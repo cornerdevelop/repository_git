@@ -1,0 +1,94 @@
+.animation-wrap {
+    overflow: hidden;
+    height: 100vh;
+    
+}
+
+.circle-motion {
+
+    width: 500px;
+    height: 500px;
+    background-color: blue;
+    border-radius: 50%;
+
+    position: fixed;
+    left: 50%; top: 50%; 
+    
+
+    transform: translate(-50%,-50%);
+
+    animation: ani-motion 0.5s cubic-bezier(0, 0, 0.18, 0.99);
+    animation-iteration-count:5;
+    animation-direction: alternate;
+    z-index: 9998;
+    animation-fill-mode: forwards;
+}
+
+
+.circle-scale { 
+    width: 500px;
+    height: 500px;
+    background-color:blue;
+    border-radius: 50%;
+
+    position: fixed;
+    left: 50%; top: 50%; 
+
+    animation:  ani-scale 1.5s 2s;
+    animation-fill-mode: forwards;
+    z-index: 9999;
+    
+    transition: 1s;
+    opacity: 0;
+    transform: translate(-50%,-50%);
+}
+
+.animation-txt {
+    
+    font-size: 30px;
+    line-height: 25px;
+    position: fixed;
+    left: 50%; top: 50%;
+    
+    
+    z-index: 9999;
+    color: red;
+
+    transform: translate(-50%,-50%);
+
+    animation: txt-wrap 1.5s 2.5s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+    
+}
+
+@keyframes ani-motion {
+    to {
+        transform: translate(-50%,-65%);
+    }
+    from {
+        display: none;       
+    }
+}  
+
+@keyframes ani-scale {
+
+
+    to {
+        transform: scale(10);    
+        opacity: 1;
+        
+    }
+}
+
+@keyframes txt-wrap {
+
+    to {
+        opacity: 1;
+    }
+}
+
+
+
+
+

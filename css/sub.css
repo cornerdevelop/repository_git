@@ -1,0 +1,130 @@
+
+.sub_btn {
+    margin-top: 30px;
+    width: 100%;
+    
+}
+
+
+.pc-home {
+    position: fixed;
+    left: 50px;
+    bottom: 50px;
+    z-index: 9999;
+
+    width: 10%;   
+    
+}
+
+/* subpage End  */
+
+
+/*  swiper  */
+.swiper {
+    background-color: #196CFF;
+    height: 100vh;
+}
+.swiper-pagination { bottom: 25px !important; }
+.swiper-scrollbar-drag { background-color: #fff !important; }
+.swiper-button-prev, .swiper-button-next {
+    color: #fff !important;
+    
+    border-radius: 100%;
+    background-color: rgba(0,0,0,0.6);
+
+    width: 60px !important;
+    height: 60px !important;
+
+}
+
+.swiper-button-next:after ,.swiper-button-prev:after {
+
+    font-size: 24px !important;
+}
+
+
+.swiper-pagination .swiper-pagination-bullet{ 
+    width: 12px;
+    height: 12px;
+    background-color: #fff;
+}
+.swiper-slide .slide-flex {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction:row;
+
+    
+}
+
+.swiper-slide .slide-flex > li {
+    height: 100vh;
+    display: flex;
+    
+    flex-direction: column;
+    justify-content: center;
+    align-items:baseline;
+
+    padding: 0 100px;
+    
+    
+    
+}
+
+.swiper-slide .slide-flex > li > .sub-title-01 {
+
+    font-size:var(--font-sub);
+    line-height: 35px;
+    color: #fff;
+
+}
+
+.swiper-slide .slide-flex > li > .sub-title-02 {
+
+    font-size: var(--font-sub);
+    color: #fff;
+    line-height: 35px;
+    margin-top: 30px;
+}
+
+.swiper-slide .slide-flex > li > .sub-title-03 {
+
+    font-size: var(--font-small);
+    color: #fff;
+    line-height: 28px;
+    margin-top: 30px;
+}
+
+.swiper-slide .slide-flex > li:nth-child(1)
+{
+ 
+    flex: 1;
+    
+}
+
+.swiper-slide .slide-flex > li:nth-child(2)
+{
+ 
+    flex: 2;
+}
+/* swiper End  */
+
+
+
+.swiper-slide .slide-flex > .slide_bg_ollot {
+    background: url("/images/sec2-img-01.png");
+
+}
+.swiper-slide .slide-flex > .slide_bg_balboa {
+    background: url("/images/sec2-img-02.png");
+
+}
+.swiper-slide .slide-flex > .slide_bg_aywa {
+    background: url("/images/sec2-img-03.png");
+
+}
+
+.swiper-slide .slide-flex [class^=slide_bg]{
+    background-size: cover;
+    background-position: center center;
+    
+}

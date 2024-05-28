@@ -1,0 +1,412 @@
+
+
+body { font-family: 'SUIT', sans-serif;  position: relative;}
+.Eb{ font-family: "Lora", serif; }
+.link_a {
+    border: none; 
+    background: none;
+    
+}
+button { width: 100%;}
+a { 
+    display: block;
+    color:#fff;
+    width: 100%; 
+    
+    padding: 8px 0;
+    border: 2px solid #fff;
+    border-radius: 15px;
+}
+
+a:hover   { 
+    display: block;
+    width: 100%; 
+    
+    background-color: #fff;
+    color: var(--blue-Color);
+    border-radius: 15px;
+
+    transition: 0.5s;
+ 
+}
+
+:root {
+
+    --main-color:#fff;
+    --common-padding:5px 5px ;
+
+    --font-Large:80px;
+    --font-subtitle:64px;
+    --font-middle:28px;
+    --font-sub:20px;
+    --font-small:18px;
+    --btn-size:24px;
+
+    --Mfont-Large:62px;
+    --Mfont-middle:22px;
+    --Mfont-small:14px;
+
+    --blue-Color: #196CFF;
+}
+
+.animation-wrap {
+
+    width: 100%;
+    height: 100vh;
+}
+
+.animation-wrap .intro_btn {
+    
+    
+    width:100%;
+    margin-top: 30px;   
+}
+
+
+
+.animation-wrap .intro_btn > a {
+    font-size: var(--font-middle);
+    
+}
+
+
+
+.circle-motion {
+
+    width: 500px;
+    height: 500px;
+    background-color:var(--blue-Color);
+    border-radius: 50%;
+
+    position: fixed;
+    left: 50%; top: 50%; 
+    
+
+    transform: translate(-50%,-50%);
+
+    animation: ani-motion 0.5s cubic-bezier(0, 0, 0.18, 0.99);
+    animation-iteration-count:5;
+    animation-direction: alternate;
+    z-index: 9998;
+    animation-fill-mode: forwards;
+}
+
+
+.circle-scale { 
+    width: 500px;
+    height: 500px;
+    background-color:var(--blue-Color);
+    border-radius: 50%;
+
+    position: fixed;
+    left: 50%; top: 50%; 
+
+    animation:  ani-scale 1.5s 2s;
+    animation-fill-mode: forwards;
+    z-index: 9999;
+    
+    transition: 1s;
+    opacity: 0;
+    transform: translate(-50%,-50%);
+}
+
+.animation-txt {
+    
+    
+    
+    position: fixed;
+    left: 50%; top: 50%;
+    
+    z-index: 9999;
+    color: #fff;
+
+    
+    transform: translate(-50%,-50%);
+
+    animation: txt-wrap 1.5s 2.5s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+.animation-txt > p {
+    margin-top: 20px;
+    font-size:var(--font-Large);
+}
+
+.animation-txt .intro-txt-01, .intro-txt-02, {
+    
+    animation: txt_opacity 1s 3s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+.animation-wrap .desc {
+
+    position: fixed;
+    right: 50px; bottom: 50px;
+    font-size: var(--font-small);
+    color: #fff;
+    z-index: 9999;
+
+    animation: txt_opacity 1s 3s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+@keyframes txt_opacity {
+
+    from { opacity: 0 ;}
+    to { opacity: 1 ;}
+}
+
+
+@keyframes ani-motion {
+    to {
+        transform: translate(-50%,-65%);
+    }
+    from {
+        display: none;       
+    }
+}  
+
+@keyframes ani-scale {
+
+
+    to {
+        transform: scale(10);    
+        opacity: 1;
+        
+    }
+}
+
+@keyframes txt-wrap {
+
+    to {
+        opacity: 1;
+        margin-top: -30px;
+    }
+}
+
+.pc-nav-wrap {
+ 
+}
+
+.pc-nav-layer {
+
+    position: fixed;
+
+    
+    height: 80px;
+    z-index: 9999;
+    right: 20px;
+    bottom: 20px;
+    background-color: #196CFF;   
+}
+
+.pc-nav-layer .btn-side {
+    position: absolute;
+    right: 30px;
+    bottom: 0px;
+    font-size:35px;
+    color: #fff;
+
+    animation: btn_move 1s infinite;
+    animation-direction: alternate;
+    
+}
+
+@keyframes btn_move {
+    to { bottom: 30px }
+    from { bottom: 20px; }
+    
+}
+
+.pc-nav-layer .logo {
+    font-size:var(--btn-size);
+    color: var(--main-color);
+}
+
+.pc-nav-layer .pc-nav-side {
+
+    position: fixed;
+    width: 35%;
+    padding: 50px;
+    
+    right: -100%;
+    top: 0;
+    bottom: 0;
+    
+    background:#fff;
+    color: var(--blue-Color);
+    font-weight: 700;
+    
+    z-index: 200;
+
+    
+    
+}
+
+
+
+.side-mask{
+
+    position: fixed;
+    left: 0; right: 0;
+    bottom: 0; top: 0;
+    background: rgba(0,0,0,0.7);
+    z-index:9999;
+
+    display: none;
+}
+
+.pc-nav-layer .pc-nav-side .side-section {
+    
+    
+    display: flex;  
+    justify-content:center;
+    flex-direction: column; 
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    
+}
+
+.pc-nav-layer .pc-nav-side .side-section > li {
+    
+    
+    flex: 1;
+    width: 100%;
+    transition: 0.5s;
+    animation: box-animation 1s;
+    animation-fill-mode: forwards;    
+    
+
+
+}
+
+.pc-nav-layer .pc-nav-side .side-section > li > a{
+    
+    
+    
+    display: block;
+    text-align: center;
+    height: 250px;
+    line-height: 250px;
+    font-size:var(--font-small);
+    color: #fff;
+    background-color:var(--blue-Color);
+    
+
+}
+
+
+
+.pc-nav-layer .pc-nav-side .btn-exit {
+    color: var(--blue-Color);
+    font-size: var(--font-middle);
+    position: absolute;
+    right: 50px;
+    top: 30px;
+}
+
+
+
+
+@keyframes box-animation {
+
+    0% {
+        
+    }
+    100% {
+        
+        border-radius: 25px;        
+    }
+} 
+
+
+
+
+
+.pc-nav-layer .pc-nav-side .side-title-txt {
+    font-size: var(--font-middle);
+    line-height: 50px;
+}
+
+.pc-nav-layer .pc-nav-side .side-common-txt {
+
+    font-size: var(--font-middle);
+    line-height: 53px;
+    padding: 3% 0 4% 0;
+}
+
+
+
+/* pc-section_02 */
+
+.pc_section_02 {
+    
+    display: flex;    
+    height: 100vh;
+    position: relative;
+    
+    
+
+}
+
+.pc_section_02 .sec02-txt-01 {
+
+    position: absolute;
+    left: 3%; bottom: 18%;
+
+    font-size: var(--font-Large);
+    color: #fff;
+}
+
+.pc_section_02 .sec02-txt-02 {
+
+    position: absolute;
+    left: 3%; bottom: 13%;
+
+    font-size: var(--font-middle);
+    color: #fff;
+}
+
+.pc_section_02 .sec02_btn_porfolio {
+
+    position: absolute;
+    left: 3%; bottom:6%;
+    width: 30%;
+    
+}
+
+
+.pc_section_02 .sec02-content {
+    flex: 1;
+}
+
+
+
+.pc_section_02 .sec02-content-bg01 { background: url(/images/sec2-img-01.png); 
+    background-size:cover;
+    background-position: center center;   }
+.pc_section_02 .sec02-content-bg02 { background: url(/images/sec2-img-02.png); 
+    background-size:cover;
+    background-position: center center;   }
+.pc_section_02 .sec02-content-bg03 { background: url(/images/sec2-img-03.png); 
+    background-size:cover;
+    background-position: center center;   }
+
+
+/* animation keyframes */
+
+@keyframes txt-opacity {
+
+    0%{ opacity: 0;  } 
+    100% { opacity: 1;  }
+}
+
+@keyframes txt-left {
+
+    0%{ opacity: 0; margin-left: 50px; } 
+    100% { opacity: 1; margin-left: 0; }
+}
